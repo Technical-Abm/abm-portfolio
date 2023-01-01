@@ -1,0 +1,8 @@
+*{
+    text-decoration: none;
+}
+
+#follower-list *{
+    color: #000;
+    margin: 10px;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="run.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- HTML to display the list of followers -->
+    <div id="followers">
+        <h2>Followers</h2>
+        <ul id="follower-list">
+        </ul>
+    </div>
+    <script>
+        // Fetch the list of followers using the GitHub API
+        fetch('https://api.github.com/users/Technical-Abm/followers')
+            .then(response => response.json())
+            .then(followers => {
+                // Get the first 10 followers from the list
+                const first10Followers = followers.slice(0, 10);
+
+                // Get the follower list element
+                const followerList = document.querySelector('#follower-list');
+                followerList.style.textDecoration = 'none';
+                followerList.style.listStyleType = 'none';
+
+                // Use a for loop to iterate through the list of followers and add an li element for each follower
+                for (let i = 0; i < first10Followers.length; i++) {
+                    const follower = first10Followers[i];
+                    const li = document.createElement('li');
+                    li.innerHTML = `<a href="${follower.html_url}">${follower.login}</a>`;
+                    followerList.appendChild(li);
+                }
+            });
+    </script>
+</body>
+</html>

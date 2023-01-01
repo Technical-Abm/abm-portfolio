@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.contact-forum{
+    width: 30%;
+    background: #5f9ea5;
+    padding: 10px 10px 10px 10px;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width:1200px){
+    .contact-forum{
+        width: 80%;
+        background: #5f9ea5;
+        padding: 10px 20px 10px 10px;
+        border-radius: 5px;
+    }
+}
+
+.contact-forum p.head-3{
+    margin: 20px 0 auto;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+.contact-forum
+input.name[type="text"],
+input.name[type="country"],
+input.name[type="city"],
+input.name[type="email"]{
+    margin: 30px 0 auto;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    background: rgb(46, 46, 46);
+    outline: none;
+    border: none;
+    height: 30px;
+    border-radius: 10px;
+    color: #fff;
+    padding: 10px;
+}
+
+.contact-forum input.name::placeholder{
+    color: #fff;
+    letter-spacing: 2px;
+    position: relative;
+    left: 10px;
+}
+
+.contact-forum .text-place{
+    margin: 20px 0 auto;
+}
+
+.contact-forum textarea.text-area{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    outline: none;
+    border-radius: 10px;
+    resize: none;
+    height: 20vh;
+    background: rgb(46, 46, 46);
+    color: #fff;
+    columns: none;
+    padding: 10px;
+    border: none;
+}
+
+@media only screen and (max-width:1200px){
+    textarea.text-area{
+        width: 80%;
+    }
+}
+
+.contact-forum textarea.text-area::placeholder{
+    position: relative;
+    left: 10px;
+    color: #fff;
+}
+
+.submit-data{
+    margin: 20px 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button.submit{
+    text-decoration: none;
+    background: rgb(46, 46, 46);
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: #fff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button.submit:hover{
+    color: #5f9ea5;
+}

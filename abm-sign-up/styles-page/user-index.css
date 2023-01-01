@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Ubuntu:wght@300;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    background-color: rgb(43, 41, 41);
+}
+
+.wrapper h3{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    margin: 20px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+@media only screen and (max-device-width:600px) {
+    .wrapper h3{
+        font-size: 16px;
+    }
+}
+
+span.class-color{
+    color: #20B315FF;
+}
+
+.front h3{
+    text-align: center;
+    margin: 10px;
+    color: rgb(235, 232, 232);
+    letter-spacing: 3px;
+    font-weight: 400;
+    position: relative;
+}
+
+.front h3::after{
+    content: '';
+    position: absolute;
+    width: 10%;
+    left: 50%;
+    bottom: -20%;
+    transform: translateX(-50%);
+    border: 1px solid #20B315FF;
+}
+
+@media only screen and (max-device-width:600px) {
+    .font h3::after{
+        content: '';
+        position: absolute;
+        width: 20%;
+        left: 50%;
+        bottom: -20%;
+        transform: translateX(-50%);
+        border: 1px solid #20B315FF;
+    }
+}
+
+.end p{
+    margin: 50px;
+    position: relative;
+    left: 30px;
+    color: rgb(224, 221, 221);
+    letter-spacing: 1px;
+}
+
+img.coding-icon{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    left: 20vh;
+    margin: 10px;
+}
+
+img.coding-icon .end p{
+    text-align: center;
+}
+
+/*
+.rotate-hr{
+    width: 20%;
+    border: 1px solid #20B315FF;
+    transform: rotate(90deg);
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
